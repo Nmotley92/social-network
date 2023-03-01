@@ -1,4 +1,4 @@
-const { User, Thought, Reaction } = require('../models');
+const { User, Thought } = require('../models');
 
 const userController = {
   // get all users
@@ -118,7 +118,7 @@ const userController = {
             )
             .catch((err) => res.json(err));
     },
-    
+
     // remove a friend from user's friend list
     deleteFriend({ params }, res) {
         User.findOneAndUpdate(

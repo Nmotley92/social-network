@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 
+
 const ThoughtSchema = new Schema(
   {
     thoughtText: {
@@ -19,9 +20,9 @@ const ThoughtSchema = new Schema(
     },
     reactions: [
       {
-        type: Schema.Types.ObjectId,
-        ref: 'Reaction',
-      },
+          type: Schema.Types.ObjectId,
+          ref: 'Reaction',
+    },
     ],
   },
   {
