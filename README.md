@@ -46,8 +46,7 @@ npm start
 
 ## Visuals
 
-
-<img width="941" alt="coderscornerscreenshot" src="https://user-images.githubusercontent.com/114119193/215669149-3bde03ca-49d2-4387-b50e-3923fa3fdeab.png">
+[social_backend.webm](https://user-images.githubusercontent.com/114119193/222256004-74faa690-cd3f-4e2a-af26-cfaf01051f29.webm)
 
 
 
