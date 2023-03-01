@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-
+// added reaction schema and removed reaction model reaction.js
 const ReactionSchema = new Schema({
   reactionBody: {
     type: String,
