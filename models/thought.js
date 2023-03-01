@@ -1,5 +1,23 @@
 const { Schema, model } = require('mongoose');
 
+const ReactionSchema = new Schema({
+  reactionBody: {
+    type: String,
+    required: true,
+    maxLength: 280,
+  },
+  username: {
+    type: String,
+    required: true,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+    get: function (timestamp) {
+      return new Date(timestamp).toLocaleString();
+    },
+  },
+});
 
 const ThoughtSchema = new Schema(
   {
@@ -12,18 +30,15 @@ const ThoughtSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      get: (timestamp) => dateFormat(timestamp),
+      get: function (timestamp) {
+        return new Date(timestamp).toLocaleString();
+      },
     },
     username: {
       type: String,
       required: true,
     },
-    reactions: [
-      {
-          type: Schema.Types.ObjectId,
-          ref: 'Reaction',
-    },
-    ],
+    reactions: [ReactionSchema],
   },
   {
     toJSON: {
